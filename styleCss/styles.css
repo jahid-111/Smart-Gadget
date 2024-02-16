@@ -1,0 +1,43 @@
+
+
+.header-Color{
+    background-color: #423f3a;
+}
+.navbar-light{
+    color: white !important;
+}
+
+.primary-color {
+    background-color: #FFA500;
+}
+
+.hover ul li a {
+    color: rgb(238, 238, 238);
+    font-weight: 4  00;
+}
+
+.hover ul li a:hover {
+    border-bottom: 1px solid #FFA500;
+    color: white;
+}
+
+.Drop-Nav ul {
+    background-color: rgb(67, 71, 71);
+    color: black;
+}
+.Drop-Nav ul li a {
+    /* background-color: rgb(54, 104, 104); */
+    color: white;
+    font-weight: 400;
+}
+.Drop-Nav ul li a:hover {
+    background-color:#998765;
+    color: rgb(47, 35, 35);
+    
+}
+
+form button :hover {
+    background-color:  #e3a342;
+    color: red;
+}
+
