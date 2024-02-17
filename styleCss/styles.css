@@ -10,6 +10,10 @@
 .primary-color {
     background-color: #FFA500;
 }
+.primary-text {
+    color: #FFA500;
+}
+
 
 .hover ul li a {
     color: rgb(238, 238, 238);
@@ -40,4 +44,25 @@ form button :hover {
     background-color:  #e3a342;
     color: red;
 }
+
+
+
+
+/* ======================  */
+
+/* SLIDER  */
+
+
+
+/* =======================  */
+
+
+
+
+.card-color {
+    background-color: #55514b; 
+    color: white;
+}
+
+
 
