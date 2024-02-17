@@ -17,7 +17,7 @@
 
 .hover ul li a {
     color: rgb(238, 238, 238);
-    font-weight: 4  00;
+    font-weight: 400;
 }
 
 .hover ul li a:hover {
@@ -64,5 +64,40 @@ form button :hover {
     color: white;
 }
 
+/* ========================  */
 
 
+.footer-color{
+
+    background-color: rgb(22, 19, 19);
+
+}
+
+
+
+/* 
+@media screen {
+    container-Media {
+        background-color: rgb(0, 0, 0);
+    }
+    
+} */
+
+
+
+/* ========================  */
+
+
+
+.card:hover img.ctgy-hover {
+    opacity: 0.8;
+    cursor:pointer;
+}
+
+
+
+.example {
+
+    top: 50px;
+  }
+  
