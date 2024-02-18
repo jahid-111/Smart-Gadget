@@ -186,8 +186,8 @@
           </button>
 
             <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton2">
+              <li id="headphoneBtn"><a class="dropdown-item" href="#">Heaphone</a></li>
               <li><a class="dropdown-item" href="#">Mobile</a></li>
-              <li><a class="dropdown-item" href="#">Heaphone</a></li>
               <li><a class="dropdown-item" href="#">Bluetooth</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Pre-Order</a></li>
@@ -198,36 +198,27 @@
 <hr class="container ">
 
       <!-- DISPLAY PRODUCT  -->
-      <section class=" container   px-3 my-3 px-sm-0  ">
-        <h2 class="text-center primary-text border-bottom-2 my-3 ">Products</h2>
+      
+      <section id="displaySection" class=" container none   px-3 my-3 px-sm-0  ">
+          <h2 id="nameOfDisplay" class="text-center primary-text border-bottom-2 my-3 ">Products</h2>
 
-
-
-        <div id="productDisplay" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
-          
-          <!-- <div class="col">
-             ...............load From Appjs
-          </div> -->
-
+          <div id="productDisplay" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
+              <!-- <div class="col">
+                ...............load From Appjs
+              </div> -->    
+          </div>
+      </section>
 
 
       
-        
-            <!-- <div class="col">
-              <div class="card card-color">
-                <img class="p-1 shadow-lg " src="Images/loadJs/HONOR-X9a,-5G,-256GB,-Emerald-Green.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Product Catagory</h5>
-                  <p class="card-text"> (Write 2 lines about this product )This is a longer card with supporting text below.</p>
-                   
-                </div>
-              </div>
-            </div> -->
+      <section id="hdphnSection" class="container d-none  px-3 my-3 px-sm-0  ">
+        <h2 id="HeadphoneHeading" class="text-center primary-text border-bottom-2 my-3 "></h2>
 
-        
-          
-        </div>
-
+        <div id="HeadphoneDisplay" class="row  row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
+              <!-- <div class="col">
+                ...............load From Headphone.js
+              </div> -->    
+          </div>
       </section>
 
 
@@ -325,6 +316,7 @@
 
 
     <script src="javaScript/main.js"></script>
+    <script src="javaScript/headphone.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
