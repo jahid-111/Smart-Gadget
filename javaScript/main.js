@@ -71,7 +71,7 @@ const displayNone =  document.getElementById('HeadphoneDisplay');
                                     <img class="p-1 shadow-lg " src="${display.image}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">${display.brand} </h5>
-                                    <p class="card-text"> (Write 2 lines about this product )This is a longer card with supporting text below.</p>
+                                    <p class="card-text"> (Write 2 lines about this product )</p>
                                 </div>
                             </div>
                 `;

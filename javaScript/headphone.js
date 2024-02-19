@@ -1,4 +1,4 @@
-console.log("write 10 object an array of headphone")
+console.log("write 10 object an array of headphone");
 
 
 const headphoneHeader = 'Head Phone';
@@ -90,10 +90,15 @@ const headphones = [
 
 
 
-
+  // DISPLAY CLASS LIST 
     const displaySection = document.getElementById('displaySection');
     const displayOfHeadPhone =  document.getElementById('hdphnSection');
+    const mobileSection  = document.getElementById('mobileSection')
+
+
     const headphoneBtn =  document.getElementById('headphoneBtn');
+
+
     
     const HeadphoneHeading = document.getElementById('HeadphoneHeading');
             HeadphoneHeading.innerText = headphoneHeader;
@@ -103,34 +108,29 @@ const headphones = [
     headphoneBtn.addEventListener('click', function (){
         const productDisplay = document.getElementById('HeadphoneDisplay');
         headphones.forEach(headphonesData => {
-                // console.log(headphonesData.brand)
+                
                 const colForHdphn = document.createElement('col')
                 colForHdphn.innerHTML = `
                 <div class="card card-color">
                 <img class="p-1 shadow-lg " src="${headphonesData.image}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${headphonesData.brand} Catagory</h5>
-                        <p class="card-text"> (Write 2 lines about this product )This is a longer card with supporting text below.</p>
+                        <p class="card-text"> (Write 2 lines about this product )</p>
                     </div>
                 </div>
                 
                     `;
             productDisplay.appendChild(colForHdphn);
-        
-        displaySection.classList.add('d-none');
-        displayOfHeadPhone.classList.remove('d-none')
+            displayOfHeadPhone.classList.remove('d-block');
+            mobileSection.classList.add('d-none')
 
-
-            
+          console.log(headphonesData)
+            // displaySection.classList.add('d-none');
+    
 
         });
 
-        
-        
-        
-
-        
-            
+             
 
 
     })
