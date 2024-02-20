@@ -97,34 +97,35 @@ const mobileDefaultsDisplay = {
 };
 
 
-// console.log(mobileDefaultsDisplay)
-// DISPLAY CLASS LIST 
     const mobileSection = document.getElementById('mobileSection'); 
     const displaySection = document.getElementById('displaySection');
     const hdphnSection = document.getElementById('hdphnSection');
-
-
+    const mobileHeading = document.getElementById('mobileHeading')
+    mobileHeading.innerText = mobileDefaultsDisplay.displayName;
     const mobilePhone =document.getElementById('mobilePhone');
-          mobilePhone.addEventListener('click', function (){
+              mobilePhone.addEventListener('click', function (){
             const mobileDisplay  =  document.getElementById('mobileDisplay');
-            mobileDefaultsDisplay.items.forEach(data => {
-                const colForMobile = document.createElement('col')
-                colForMobile.innerHTML = `
-                <div class="card card-color">
-                <img class="p-1 shadow-lg " src="${data.image}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">${data.name} Catagory</h5>
-                        <p class="card-text"> (Write 2 lines about this Mobile)</p>
-                    </div>
-                </div>
-                
-                    `;
-                mobileDisplay.appendChild(colForMobile);
+                  mobileDisplay.innerHTML = ''; // Clear previous content on each click
+                    mobileDefaultsDisplay.items.forEach(data => {
+                        const colForMobile = document.createElement('col')
+                        colForMobile.innerHTML = `
+                        <div class="card card-color">
+                        <img class="p-1 shadow-lg " src="${data.image}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Product Name : ${data.name}</h5>
+                              
+                                <button class="primary-color fw-semibold rounded-2   order-Btn  py-2 px-3 border d-inline w-100">Oder Now</button> 
+                              
+                            </div>
+                        </div>
+                            `;
+                        mobileDisplay.appendChild(colForMobile);
+                    });
                 mobileSection.classList.remove('d-none');
                 hdphnSection.classList.add('d-none');
                 bluetoothSection.classList.add('d-none');
-            })     
-    })
+        })
+
 
 
 
@@ -226,15 +227,13 @@ const mobileDefaultsDisplay = {
       // DISPLAY CLASS LIST 
  
         const displayOfHeadPhone =  document.getElementById('hdphnSection');
-        
         const HeadphoneHeading = document.getElementById('HeadphoneHeading');
         HeadphoneHeading.innerText = headphoneHeader;
-
         const headphoneBtn =  document.getElementById('headphoneBtn');
               headphoneBtn.addEventListener('click', function (){
                 const productDisplay = document.getElementById('HeadphoneDisplay');
+                      productDisplay.innerHTML = '';
                 headphones.forEach(headphonesData => {
-
                     const colForHdphn = document.createElement('col')
                     colForHdphn.innerHTML = `
                     <div class="card card-color">
@@ -242,6 +241,7 @@ const mobileDefaultsDisplay = {
                         <div class="card-body">
                             <h5 class="card-title">${headphonesData.brand} Catagory</h5>
                             <p class="card-text"> (Write 2 lines about this product )</p>
+                            <button class="primary-color fw-semibold rounded-2   order-Btn  py-2 px-3 border d-inline w-100">Oder Now</button> 
                         </div>
                     </div>
                     
@@ -250,6 +250,7 @@ const mobileDefaultsDisplay = {
                 displayOfHeadPhone.classList.remove('d-none');
                 mobileSection.classList.add('d-none');
                 bluetoothSection.classList.add('d-none');
+               
     
   
             });                
@@ -350,36 +351,33 @@ const mobileDefaultsDisplay = {
             ]
         };
         
-
-    // console.log(bluetoothDevices.devices[0].name)
-
-
     const bluetootHeading =  document.getElementById('bluetootHeading');
           bluetootHeading.innerText =  bluetoothDevices.bluetooth;
     const bluetoothSection =  document.getElementById('bluetoothSection');
-    // console.log(bluetoothSection)
 
     const bluetoothBtn = document.getElementById('bluetoothBtn');
           bluetoothBtn.addEventListener('click', function(){
-                bluetoothDevices.devices.forEach( bluetoothData => {
+            const bluetoothDisplay = document.getElementById('bluetoothDisplay');
+                    bluetoothDisplay.innerHTML = ''; // Clear previous content
+        
+            bluetoothDevices.devices.forEach( bluetoothData => {
+                const colForBluetooth = document.createElement('col')
+                colForBluetooth.innerHTML = `
+                <div class="card card-color">
+                <img class="p-1 shadow-lg " src="${bluetoothData.image}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${bluetoothData.brand} Catagory</h5>
+                        <p class="card-text"> (Write 2 lines about this product )</p>
+                        <button class="primary-color fw-semibold rounded-2   order-Btn  py-2 px-3 border d-inline w-100">Oder Now</button> 
+                    </div>
+                </div> `;
+                
+                bluetoothDisplay.appendChild(colForBluetooth);
+            });
+            bluetoothSection.classList.remove('d-none');
+            mobileSection.classList.add('d-none');
+            hdphnSection.classList.add('d-none');
+        })
 
-                    const bluetoothDisplay = document.getElementById('bluetoothDisplay')
 
-                    const colForBluetooth = document.createElement('col')
-                    colForBluetooth.innerHTML = `
-                    <div class="card card-color">
-                    <img class="p-1 shadow-lg " src="${bluetoothData.image}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">${bluetoothData.brand} Catagory</h5>
-                            <p class="card-text"> (Write 2 lines about this product )</p>
-                        </div>
-                    </div> `;
-                    
-                    bluetoothDisplay.appendChild(colForBluetooth)
-                    bluetoothSection.classList.remove('d-none');
-
-                    mobileSection.classList.add('d-none');
-                    hdphnSection.classList.add('d-none');
-                })
-
-          })
+        
